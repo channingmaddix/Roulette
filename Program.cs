@@ -57,7 +57,22 @@ namespace Roulette
                                                             {"B", "B", "R"},
                                                             {"B", "R", "B"},
                                                             {"R", "B", "R"}     };
-            int bin = 24;
+            bool input = false;
+            int bin = 40;
+            while (input == false)
+            {
+                Console.WriteLine("Input winning bin between 1 and 36: ");
+                bin = System.Int32.Parse(Console.ReadLine());
+                if (bin > 36 || bin < 1)
+                {
+                    Console.WriteLine("Please input a number between 1 and 36: ");
+                    bin = System.Int32.Parse(Console.ReadLine());
+                }
+                else if (bin <= 36 && bin >= 1)
+                {
+                    input = true;
+                }
+            }
             string color = "";
             for (int i = 0; i < numBoard.Length; i++)
             {

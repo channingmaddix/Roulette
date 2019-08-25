@@ -64,7 +64,7 @@ namespace Roulette
         {
             if (bin < 19)
             {
-                Console.Write("\nLows: 0 00 ");
+                Console.Write("\nLows: ");
                 for (int i = 0; numBoard[i] < 19; i++)
                 {
                     Console.Write(numBoard[i] + " ");
@@ -126,7 +126,6 @@ namespace Roulette
             {
                 thirdColumn[i] = thirdColumn[i - 1] + 3;
             }
-
             for (int i = 0; i < 12; i++)
             {
                 if (firstColumn[i] == bin)
